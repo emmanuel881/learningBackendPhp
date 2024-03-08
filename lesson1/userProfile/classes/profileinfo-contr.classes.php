@@ -1,5 +1,28 @@
 <?php
 
 class ProfileInfoContr extends ProfileInfo {
-    
+
+    private $userId;
+    private $userUid;
+
+    public function __construct($userId, $userUid){
+        $this->userId = $userId;
+        $this->userUid = $userUid;
+    }
+
+    //default profile info
+
+    public function defaultProfileInfo(){
+        $profileAbout = "say sommething about your-self";
+        $profileTitle = "Hi!! I am ".$this->userUid;
+        $profileText = "Welcome to my profile!! i will let you know about myself";
+
+        //lets add default information
+        $this->setProfileInfo($profileAbout, $profileTitle, $profileText, $this->userId);
+    }
+
+    public function updateProfileInfo($about, $introTitle,$introText){
+
+    }
+    //lets check if user did fill in or left it empty
 }
