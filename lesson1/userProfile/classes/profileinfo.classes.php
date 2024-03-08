@@ -39,7 +39,7 @@ class ProfileInfo extends Dbh {
     //lets set default profile info for the user
 
     protected function setProfileInfo($profileAbout, $profileTitle, $profileText, $userId){
-        $stmt = this->connect()->prepare('INSERT INTO profiles (profiles_about, profiles_introtitle, profiles_introtext, users_id) VALUES (?, ?, ?, ?)');
+        $stmt = $this->connect()->prepare('INSERT INTO profiles (profiles_about, profiles_introtitle, profiles_introtext, users_id) VALUES (?, ?, ?, ?)');
 
         if(!$stmt->execute(array($profileAbout, $profileTitle, $profileText, $userId))){
             $stmt = null;

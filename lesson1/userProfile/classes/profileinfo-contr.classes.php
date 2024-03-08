@@ -22,7 +22,30 @@ class ProfileInfoContr extends ProfileInfo {
     }
 
     public function updateProfileInfo($about, $introTitle,$introText){
+        //error handlers
+        if($this->emptyInputCheck($about, $introTitle,$introText) == true){
+            header('location: ../profilesettings.php?error=emptyField');
+            exit();
+        }
+
+        //update information
+        $this->setNewProfileInfo($about, $introTitle, $introText, $this->userId);
+
 
     }
     //lets check if user did fill in or left it empty
+    public function emptyInputCheck($about, $introTitle,$introText){
+        $result;
+
+        if(empty($about) || empty($introTitle) || empty($introText))
+        {
+            $result = true;
+        }
+        else{
+            $result = false;
+        }
+
+        return $result;
+
+    }
 }
