@@ -3,7 +3,7 @@
 class ProfileInfo extends Dbh {
     //we get the profile infomation
     protected function getProfileInfo($userId){
-        $stmt = this->connect()->prepare('SELECT * FROM profiles WHERE users_id = ?;');
+        $stmt = $this->connect()->prepare('SELECT * FROM profiles WHERE users_id = ?;');
 
         if(!$stmt->execute(array($userId))){
             $stmt = null;
