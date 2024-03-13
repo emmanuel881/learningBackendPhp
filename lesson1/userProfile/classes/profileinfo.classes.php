@@ -25,7 +25,7 @@ class ProfileInfo extends Dbh {
 
     //we update the profile information
     protected function setNewProfileInfo($profileAbout, $profileTitle, $profileText, $userId){
-        $stmt = this->connect()->prepare('UPDATE profiles SET profiles_about = ?, profiles_introtitle = ?, profiles_introtext = ? WHERE users_id = ?;');
+        $stmt = $this->connect()->prepare('UPDATE profiles SET profiles_about = ?, profiles_introtitle = ?, profiles_introtext = ? WHERE users_id = ?;');
 
         if(!$stmt->execute(array($profileAbout, $profileTitle, $profileText, $userId))){
             $stmt = null;

@@ -1,6 +1,7 @@
 <?php
 
 class ProfileInfoView extends ProfileInfo {
+    //fetching info from the database
     public function fetchAbout($userId){
         $profileInfo = $this->getProfileInfo($userId);
 

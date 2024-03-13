@@ -3,7 +3,7 @@
 
     include "./classes/dbh.classes.php";
     include "./classes/profileinfo.classes.php";
-    include "./classes/profileinfo-contr.classes.php";
+    
     include "./classes/profileinfo-view.classes.php";
 
     $profileInfo = new ProfileInfoView();
@@ -34,6 +34,11 @@
             $profileInfo->fetchAbout($_SESSION["userid"]);
          ?>
     </p>
+    <a href="./profilesettings.php">
+        <button>change profile details</button>
+    </a>
+    <br>
+    <br>
     <a href="index.php">
         <button>Back</button>
     </a>
