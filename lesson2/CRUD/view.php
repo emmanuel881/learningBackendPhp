@@ -46,6 +46,14 @@ include "./connect.php";
             <td>'.$mobile.'</td>
             <td>'.$pwd.'</td>
             
+            <td>
+            <a href="update.php?updateId='.$id.'">
+            <button class="btn btn-primary">Update</button>
+            </a>
+            <a href="delete.php?deleteId='.$id.'">
+            <button class="btn btn-danger">Delete</button>
+            </a>
+            </td> 
             </tr>
             ';
         }
@@ -56,8 +64,9 @@ include "./connect.php";
     ?>
     
   </tbody>
+  <a href=""></a>
 </table>
-        
+       
     </div>
 </body>
 </html>
