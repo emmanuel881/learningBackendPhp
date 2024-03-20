@@ -1,4 +1,5 @@
 <?php
+
 //deal with all the database stuff
 // will extend to the db class so as to use the properties of that class
 class Signup extends Dbh{

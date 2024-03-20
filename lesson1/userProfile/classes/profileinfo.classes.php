@@ -20,6 +20,7 @@ class ProfileInfo extends Dbh {
         //fetch data as an associative array
         $profileData = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+        //return profile data
         return $profileData;
     }
 

@@ -1,10 +1,12 @@
 <?php
 if(isset($_POST["submit"])){
     //grabbing the data
+
     $uid = $_POST["uid"];
     $pwd = $_POST["pwd"];
     $pwdrepeat = $_POST["pwdrepeat"];
     $email = $_POST["email"];
+
 
     //Instantiate signupController class(SignUpContr)
     // --    createing a object based of a class
